@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    font-family: "Inter", serif;
+}
+::selection {
+    color: white;
+    background-color: rgb(154, 96, 20);
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #31313093;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fd5f2b;
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffaf2e;
+}
