@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-export function LineMdExternalLink(props: SVGProps<SVGSVGElement>) {
+export function LineMdEmailFilled(props: SVGProps<SVGSVGElement>) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -9,6 +9,15 @@ export function LineMdExternalLink(props: SVGProps<SVGSVGElement>) {
             viewBox="0 0 24 24"
             {...props}
         >
+            <path fill="currentColor" fillOpacity="0" d="M12 11l-8 -5h16l-8 5Z">
+                <animate
+                    fill="freeze"
+                    attributeName="fill-opacity"
+                    begin="0.8s"
+                    dur="0.5s"
+                    values="0;1"
+                ></animate>
+            </path>
             <g
                 fill="none"
                 stroke="currentColor"
@@ -17,45 +26,32 @@ export function LineMdExternalLink(props: SVGProps<SVGSVGElement>) {
                 strokeWidth="2"
             >
                 <path
-                    strokeDasharray="48"
-                    strokeDashoffset="48"
-                    d="M11 5h-6v14h14v-6"
+                    strokeDasharray="64"
+                    strokeDashoffset="64"
+                    d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"
                 >
                     <animate
                         fill="freeze"
                         attributeName="stroke-dashoffset"
                         dur="0.6s"
-                        values="48;0"
+                        values="64;0"
                     ></animate>
                 </path>
                 <path
-                    strokeDasharray="12"
-                    strokeDashoffset="12"
-                    d="M13 11l7 -7"
+                    strokeDasharray="24"
+                    strokeDashoffset="24"
+                    d="M3 6.5l9 5.5l9 -5.5"
                 >
                     <animate
                         fill="freeze"
                         attributeName="stroke-dashoffset"
                         begin="0.6s"
                         dur="0.2s"
-                        values="12;0"
-                    ></animate>
-                </path>
-                <path
-                    strokeDasharray="8"
-                    strokeDashoffset="8"
-                    d="M21 3h-6M21 3v6"
-                >
-                    <animate
-                        fill="freeze"
-                        attributeName="stroke-dashoffset"
-                        begin="0.8s"
-                        dur="0.2s"
-                        values="8;0"
+                        values="24;0"
                     ></animate>
                 </path>
             </g>
         </svg>
     );
 }
-export default LineMdExternalLink;
+export default LineMdEmailFilled;

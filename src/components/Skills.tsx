@@ -1,5 +1,5 @@
-import Backend from "./technologies/Backend";
-import Frontend from "./technologies/Frontend";
+import Primary from "./technologies/Primary";
+import Secondary from "./technologies/Secondary";
 
 const Skills = () => {
     return (
@@ -14,8 +14,8 @@ const Skills = () => {
             </h1>
 
             <div className=" w-full border-1 border-red-500 flex flex-col items-start justify-center gap-3 mt-2 ">
-                <Frontend />
-                <Backend />
+                <Primary />
+                <Secondary />
             </div>
         </div>
     );

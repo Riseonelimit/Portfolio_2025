@@ -5,7 +5,7 @@ import DeviconPostgresql from "../svg/DeviconPostgresql";
 import VscodeIconsFileTypeCss from "../svg/VscodeIconsFileTypeCss";
 import VscodeIconsFileTypeHtml from "../svg/VscodeIconsFileTypeHtml";
 
-const Backend = () => {
+const Secondary = () => {
     const { techArray, isProjectHovered } = useAppContext();
 
     return (
@@ -13,13 +13,13 @@ const Backend = () => {
             data-aos="flip-up"
             data-aos-delay="500"
             data-aos-duration="600"
-            className=" flex flex-col items-start justify-center col-span-1"
+            className=" w-full flex flex-col items-start justify-center col-span-1"
         >
             <h2 className=" text-yellow-100 font-medium text-[1rem]">
                 The Classics
             </h2>
             <div
-                className={` flex items-center justify-start  gap-3 p-4 border-x-[1px] border-yellow-700  rounded-lg relative `}
+                className={` w-full lg:w-auto lg:flex md:flex items-center justify-start lg:justify-start flex-wrap grid grid-cols-6 gap-3 p-4 border-x-[1px] border-yellow-700 rounded-lg relative `}
             >
                 <div
                     className={` text-3xl relative hover:sky-rose-200 group border-x-[1.5px] shadow-md shadow-orange-400 border-orange-500 rounded-md p-2 duration-150 ${
@@ -96,4 +96,4 @@ const Backend = () => {
     );
 };
 
-export default Backend;
+export default Secondary;

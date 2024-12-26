@@ -14,7 +14,7 @@ import VscodeIconsFileTypeNode from "../svg/VscodeIconsFileTypeNode";
 import VscodeIconsFileTypeReactjs from "../svg/VscodeIconsFileTypeReactjs";
 import VscodeIconsFileTypeTypescriptOfficial from "../svg/VscodeIconsFileTypeTypescriptOfficial";
 
-const Frontend = () => {
+const Primary = () => {
     const { techArray, isProjectHovered } = useAppContext();
 
     return (
@@ -22,11 +22,11 @@ const Frontend = () => {
             data-aos="flip-up"
             data-aos-delay="300"
             data-aos-duration="600"
-            className=" flex flex-col items-start justify-center col-span-1"
+            className=" w-full flex flex-col items-start justify-center col-span-1"
         >
             <h2 className=" text-yellow-100 font-medium text-[1rem]">GenZ</h2>
             <div
-                className={` flex items-center  justify-start flex-wrap gap-3 p-4  border-x-[1px] border-yellow-700  rounded-lg relative  `}
+                className={` w-full lg:w-auto lg:flex md:flex items-center justify-start lg:justify-start flex-wrap grid grid-cols-6  gap-3 p-4  border-x-[1px] border-yellow-700  rounded-lg relative  `}
             >
                 <div
                     className={` text-3xl relative hover:sky-rose-200 group border-x-[1.5px] shadow-md shadow-sky-400 border-sky-500 rounded-md p-2 duration-150  ${
@@ -149,7 +149,7 @@ const Frontend = () => {
                 <div
                     className={`text-3xl relative hover:sky-rose-200 group border-x-[1.5px] shadow-md shadow-green-400 border-green-500 rounded-md p-2 duration-150 ${
                         isProjectHovered
-                            ? techArray.includes("Prisma")
+                            ? techArray.includes("MongoDB")
                                 ? " "
                                 : "opacity-20"
                             : " "
@@ -178,7 +178,7 @@ const Frontend = () => {
                 <div
                     className={` text-3xl relative hover:sky-rose-200 group border-x-[1.5px] shadow-md shadow-emerald-300 border-emerald-300 rounded-md p-2 duration-150 ${
                         isProjectHovered
-                            ? techArray.includes("Prisma")
+                            ? techArray.includes("PrismaORM")
                                 ? " "
                                 : "opacity-20"
                             : " "
@@ -237,4 +237,4 @@ const Frontend = () => {
     );
 };
 
-export default Frontend;
+export default Primary;

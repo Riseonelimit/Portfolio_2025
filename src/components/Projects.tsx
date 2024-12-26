@@ -15,18 +15,21 @@ const Projects = () => {
                 Projects
             </h1>
 
-            <div className=" w-full grid grid-cols-2 col-span-1 gap-3  ">
+            <div className=" w-full grid lg:grid-cols-2 col-span-1 gap-3  ">
                 <div
                     onMouseEnter={() => {
                         setTechArray([
+                            "TypeScript",
                             "React",
                             "Node.js",
                             "Express",
                             "Socket.io",
                             "Supabase",
+                            "PrismaORM",
                             "Tailwind CSS",
                             "GitHub",
                             "PostgreSQL",
+                            "Redis",
                         ]);
                         setIsProjectHovered(true);
                     }}
@@ -34,7 +37,7 @@ const Projects = () => {
                         setTechArray([]);
                         setIsProjectHovered(false);
                     }}
-                    className="w-full flex flex-col col-span-1 items-center justify-start p-5 gap-4 rounded-lg bg-orange-950/20 border-[1px] border-yellow-700"
+                    className="w-full flex flex-col col-span-1 items-start justify-start p-5 gap-4 rounded-lg bg-orange-950/20 border-[1px] border-yellow-700"
                 >
                     <div className=" w-full flex flex-col items-start justify-between gap-1">
                         <a className=" text-xl font-semibold">Chatopia</a>
@@ -46,7 +49,7 @@ const Projects = () => {
                             <LineMdExternalLink className=" text-lg" />
                         </a>
                     </div>
-                    <p className=" text-sm  font-light ">
+                    <p className=" text-sm  font-light">
                         ChatApp with rooms and private messaging feature. Built
                         using React, Node.js, Express, and Socket.io.
                     </p>
@@ -58,10 +61,9 @@ const Projects = () => {
                             "React",
                             "Node.js",
                             "Express",
-                            "Socket.io",
-                            "Supabase",
                             "Tailwind CSS",
                             "GitHub",
+                            "MongoDB",
                         ]);
                         setIsProjectHovered(true);
                     }}
@@ -97,8 +99,6 @@ const Projects = () => {
                             "React",
                             "Node.js",
                             "Express",
-                            "Socket.io",
-                            "Supabase",
                             "Tailwind CSS",
                             "GitHub",
                             "MySQL",

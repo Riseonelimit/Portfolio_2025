@@ -1,0 +1,30 @@
+{
+    "data": {
+        "kv": {},
+        "discord_user": {
+            "id": "639060504509284362",
+            "username": "riseonelimit",
+            "avatar": "7ed019079925eab10fa870b27d3f005c",
+            "discriminator": "0",
+            "clan": null,
+            "avatar_decoration_data": {
+                "sku_id": "1315853682235019326",
+                "asset": "a_a657b4509fd2b75f5bb12e3a0bb0a7a0",
+                "expires_at": 1739520000
+            },
+            "bot": false,
+            "global_name": "Riseonelimit",
+            "primary_guild": null,
+            "display_name": "Riseonelimit",
+            "public_flags": 128
+        },
+        "activities": [],
+        "discord_status": "online",
+        "active_on_discord_web": false,
+        "active_on_discord_desktop": true,
+        "active_on_discord_mobile": false,
+        "listening_to_spotify": false,
+        "spotify": null
+    },
+    "success": true
+}
