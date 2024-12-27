@@ -6,10 +6,7 @@ import SpotifyStatus from "./SpotifyStatus";
 
 const Main = () => {
     return (
-        <div className=" w-[95%] lg:w-2/4 gap-5  rounded-r-2xl duration-300 p-4 flex flex-col  justify-center items-start relative  text-white mt-5 lg:mt-20  ">
-            <h1 className=" px-3 py-2 border-orange-300 border-[1px] font-semibold text-xs text-orange-100 bg-orange-950 rounded-lg">
-                🚧 In Progress
-            </h1>
+        <div className=" w-[95%] lg:w-2/4 gap-5  rounded-r-2xl duration-300 p-4 flex flex-col  justify-center items-start relative  text-white mt-5 lg:mt-20 z-20  ">
             <div className=" w-full flex lg:flex-row flex-col items-start justify-between lg:items-center gap-5 mt-5">
                 <div
                     className="  flex flex-col justify-center items-start z-20  "
@@ -32,9 +29,6 @@ const Main = () => {
             <About />
             <Skills />
             <Projects />
-            {/* <h1 className=" text-[17rem] font-bold text-orange-400 self-center absolute opacity-10 tracking-wider ">
-                2024
-            </h1> */}
         </div>
     );
 };

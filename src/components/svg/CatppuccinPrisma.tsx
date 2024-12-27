@@ -20,3 +20,4 @@ export function CatppuccinPrisma(props: SVGProps<SVGSVGElement>) {
     );
 }
 export default CatppuccinPrisma;
+

@@ -38,7 +38,6 @@ const SpotifyStatus = () => {
         };
     }, []);
 
-    console.log(spotifyData);
     return (
         <div
             className={` px-2 py-2 rounded-lg flex relative justify-between items-center border-[1px] gap-2 bg-green-950/40 border-green-400 `}

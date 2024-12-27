@@ -1,7 +1,18 @@
+import Aos from "aos";
+import { useEffect } from "react";
+import { useAppContext } from "../hooks/useAppContext";
 import Primary from "./technologies/Primary";
 import Secondary from "./technologies/Secondary";
 
 const Skills = () => {
+    const { isProjectHovered } = useAppContext();
+
+    useEffect(() => {
+        if (!isProjectHovered) {
+            Aos.refreshHard();
+        }
+    }, [isProjectHovered]);
+
     return (
         <div
             data-aos="fade-in"
