@@ -46,7 +46,7 @@ const Secondary = () => {
                             />
                             <p
                                 className={cn(
-                                    " absolute top-10 text-red  group-hover:visible group-hover:opacity-100  opacity-0 invisible px-2 py-2 rounded-md border-[1px] font-medium text-xs z-20",
+                                    " absolute top-10 text-red  group-hover:visible group-hover:opacity-100  opacity-0 invisible px-2 py-2 rounded-md border-[1px] font-medium text-xs z-[99]",
                                     icon.bgColor,
                                     icon.hoverTextColor,
                                     icon.borderColor

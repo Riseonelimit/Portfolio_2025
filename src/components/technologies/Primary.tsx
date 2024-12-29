@@ -23,7 +23,7 @@ const Primary = () => {
                         <div
                             key={icon.techKey}
                             className={cn(
-                                "text-3xl relative group border-x-[1.5px] shadow-2xl rounded-md p-2  flex items-center justify-center duration-150 z-0",
+                                "text-3xl relative group border-x-[1.5px] shadow-2xl rounded-md p-2  flex items-center justify-center duration-150 ",
                                 // icon.bgColor,
                                 icon.shadowColor,
                                 icon.borderColor,
@@ -36,7 +36,7 @@ const Primary = () => {
                         >
                             <IconComponent
                                 className={cn(
-                                    " overflow-hidden object-cover text-white duration-500  z-0",
+                                    " overflow-hidden object-cover text-white duration-500",
                                     icon.textColor,
                                     icon.name === "GoogleMapsAPI"
                                         ? "size-7"
@@ -45,7 +45,7 @@ const Primary = () => {
                             />
                             <p
                                 className={cn(
-                                    "absolute top-10 text-red group-hover:visible group-hover:opacity-100  opacity-0 invisible px-2 py-2 rounded-md border-[1px] font-medium z-60 text-xs   ",
+                                    "absolute top-10 text-red group-hover:visible group-hover:opacity-100  opacity-0 invisible px-2 py-2 rounded-md border-[1px] font-medium z-[99] text-xs   ",
                                     icon.bgColor,
                                     icon.hoverTextColor,
                                     icon.borderColor
