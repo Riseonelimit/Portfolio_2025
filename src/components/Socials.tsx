@@ -6,7 +6,7 @@ import resume from "/Resume.pdf";
 
 const Socials = () => {
     return (
-        <div className="  flex justify-center items-center gap-2 ">
+        <div className="flex justify-center items-center gap-2 ">
             <a
                 href="https://github.com/Riseonelimit"
                 target="_blank"
