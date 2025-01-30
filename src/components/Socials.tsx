@@ -2,7 +2,7 @@ import LineMdEmailFilled from "./svg/LineMdEmailFilled";
 import PajamasGithub from "./svg/PajamasGithub";
 import RiLinkedinFill from "./svg/RiLinkedinFill";
 
-import resume from "/public/Resume.pdf";
+import resume from "/Resume.pdf";
 
 const Socials = () => {
     return (
