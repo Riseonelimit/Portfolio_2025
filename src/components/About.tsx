@@ -43,7 +43,7 @@ const About = () => {
             </h1>
             <p className=" leading-8">
                 I am mostly a self-taught full-stack developer currently in my
-                first year as an MSc Computer Applications student. My skills
+                second year as an MSc Computer Applications student. My skills
                 include React, Node.js, Express, MongoDB, Supabase, and Tailwind
                 CSS, although not limited to it. I am currently exploring Spring
                 Boot, Docker, and Kubernetes. <br />
