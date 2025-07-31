@@ -4,7 +4,82 @@ import LineMdExternalLink from "./svg/LineMdExternalLink";
 import PajamasGithub from "./svg/PajamasGithub";
 
 const Projects = () => {
-    const { setTechArray, setIsProjectHovered } = useAppContext();
+    const { setTechArray, setIsProjectHovered, isRecruiterMode } =
+        useAppContext();
+
+    if (isRecruiterMode) {
+        return (
+            <div className="w-full gap-5 rounded-r-2xl duration-300 flex flex-col justify-center items-start relative mt-4 text-orange-100 transition-all">
+                <h1 className="text-xl font-bold text-transparent bg-clip-text drop-shadow-lg bg-gradient-to-bl from-orange-500 via-yellow-200 to-orange-500">
+                    Key Projects
+                </h1>
+
+                <div className="w-full space-y-4">
+                    {projectData.slice(0, 3).map((project, index) => (
+                        <div
+                            key={index}
+                            className="w-full flex flex-col items-start justify-start p-4 gap-3 rounded-lg bg-gradient-to-br from-orange-950/30 to-yellow-950/20 border-[1px] border-orange-500/30"
+                        >
+                            <div className="w-full flex justify-between items-start">
+                                <div className="flex-1">
+                                    <h3 className="text-lg font-semibold text-orange-200">
+                                        {project.name}
+                                    </h3>
+                                    <p className="text-sm text-gray-300 mt-1 leading-relaxed">
+                                        {project.description.length > 120
+                                            ? `${project.description.substring(
+                                                  0,
+                                                  120
+                                              )}...`
+                                            : project.description}
+                                    </p>
+                                </div>
+                                <a
+                                    href={project.githubLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="ml-3 p-1.5 bg-gray-800/50 border border-gray-600 rounded hover:bg-gray-700/50 transition-colors"
+                                >
+                                    <LineMdExternalLink className="text-sm text-gray-400" />
+                                </a>
+                            </div>
+
+                            <div className="flex flex-wrap gap-1.5 mt-2">
+                                {project.techStack.slice(0, 5).map((tech) => (
+                                    <span
+                                        key={tech}
+                                        className="px-2 py-0.5 bg-orange-950/50 border border-orange-500/40 rounded text-xs text-orange-300"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                                {project.techStack.length > 5 && (
+                                    <span className="px-2 py-0.5 bg-gray-950/50 border border-gray-500/40 rounded text-xs text-gray-400">
+                                        +{project.techStack.length - 5} more
+                                    </span>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+
+                    <div className="w-full flex items-center justify-center p-4 rounded-lg bg-gradient-to-br from-gray-950/50 to-zinc-950/30 border-[1px] border-gray-500/30">
+                        <a
+                            href="https://github.com/Riseonelimit?tab=repositories"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
+                        >
+                            <PajamasGithub className="size-5 object-cover" />
+                            <span className="text-sm font-medium">
+                                View All Projects on GitHub
+                            </span>
+                            <LineMdExternalLink className="text-sm" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div

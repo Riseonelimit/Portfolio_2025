@@ -1,12 +1,15 @@
 import LineMdEmailFilled from "./svg/LineMdEmailFilled";
 import PajamasGithub from "./svg/PajamasGithub";
 import RiLinkedinFill from "./svg/RiLinkedinFill";
+import { useAppContext } from "../hooks/useAppContext";
 
 import resume from "/Resume.pdf";
 
 const Socials = () => {
+    const { isRecruiterMode, setIsRecruiterMode } = useAppContext();
+
     return (
-        <div className="flex justify-center items-center gap-2 ">
+        <div className="flex justify-center items-center gap-2 flex-wrap">
             <a
                 href="https://github.com/Riseonelimit"
                 target="_blank"
@@ -43,6 +46,16 @@ const Socials = () => {
             >
                 Download CV
             </a>
+            <button
+                onClick={() => setIsRecruiterMode(!isRecruiterMode)}
+                className={`px-3 py-2 border-[1px] rounded-lg text-sm font-medium transition-all duration-300 ${
+                    isRecruiterMode
+                        ? "border-green-500 bg-green-950/40 text-green-400 hover:bg-green-950/60"
+                        : "border-blue-500 bg-blue-950/40 text-blue-400 hover:bg-blue-950/60"
+                }`}
+            >
+                {isRecruiterMode ? "🎨 Portfolio View" : "👔 Recruiter View"}
+            </button>
         </div>
     );
 };

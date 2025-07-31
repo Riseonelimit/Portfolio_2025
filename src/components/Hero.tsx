@@ -1,10 +1,14 @@
 import About from "./About";
+import Experience from "./Experience";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Socials from "./Socials";
 import SpotifyStatus from "./SpotifyStatus";
+import { useAppContext } from "../hooks/useAppContext";
 
 const Main = () => {
+    const { isRecruiterMode } = useAppContext();
+
     return (
         <div className=" w-[95%] lg:w-2/4 gap-5  rounded-r-2xl duration-300 p-4 flex flex-col  justify-center items-start relative  text-white mt-5 lg:mt-20 z-20  ">
             <div className=" w-full flex lg:flex-row flex-col items-start justify-between lg:items-center gap-5 mt-5">
@@ -23,11 +27,12 @@ const Main = () => {
                     <Socials />
                 </div>
 
-                <SpotifyStatus />
+                {!isRecruiterMode && <SpotifyStatus />}
             </div>
 
             <About />
             <Skills />
+            <Experience />
             <Projects />
         </div>
     );

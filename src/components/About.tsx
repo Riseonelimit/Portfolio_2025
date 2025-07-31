@@ -1,6 +1,41 @@
 import luffy from "../assets/luffy.gif";
+import { useAppContext } from "../hooks/useAppContext";
 
 const About = () => {
+    const { isRecruiterMode } = useAppContext();
+
+    if (isRecruiterMode) {
+        return (
+            <div className="w-full flex flex-col justify-center items-start z-20 mt-10">
+                <h1 className="text-xl font-bold text-transparent bg-clip-text drop-shadow-lg bg-gradient-to-bl from-orange-500 via-yellow-200 to-orange-500">
+                    Professional Summary
+                </h1>
+                <div className="leading-7 mt-2">
+                    <p className="mb-4">
+                        <span className="font-semibold text-orange-400">
+                            Full-Stack Developer
+                        </span>{" "}
+                        |
+                        <span className="font-semibold text-blue-400">
+                            {" "}
+                            MSc Computer Applications Student
+                        </span>
+                    </p>
+                    <p className="mb-3">
+                        Full-stack developer with experience in building
+                        scalable web applications using React.js, Node.js, and
+                        Spring Boot. Adept at integrating third-party APIs,
+                        managing databases, and implementing authentication
+                        systems. Strong focus on performance, maintainable code,
+                        and delivering business-ready solutions across the
+                        frontend and backend. Passionate about clean UI, DevOps,
+                        and agile development.
+                    </p>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className=" w-full flex flex-col justify-center items-start z-20 mt-10">
             <h1 className=" text-xl font-bold text-transparent bg-clip-text drop-shadow-lg bg-gradient-to-bl from-orange-500 via-yellow-200 to-orange-500">
