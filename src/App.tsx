@@ -4,10 +4,35 @@ import { useEffect } from "react";
 import "./App.css";
 import Hero from "./components/Hero";
 import BackgroundBlur from "./components/svg/BackgroundBlur";
+import DeveloperConsole from "./components/DeveloperConsole";
+import StatusActivity from "./components/StatusActivity";
 import { useAppContext } from "./hooks/useAppContext";
+import { useSecretSequence } from "./hooks/useSecretSequence";
 
 function App() {
-    const { isRecruiterMode } = useAppContext();
+    const {
+        isRecruiterMode,
+        isDeveloperConsoleOpen,
+        setIsDeveloperConsoleOpen,
+        isStatusActivityOpen,
+        setIsStatusActivityOpen,
+    } = useAppContext();
+
+    // Secret sequence hook for "dev" easter egg
+    useSecretSequence({
+        sequence: "dev",
+        timeout: 30000, // Keep console open for 30 seconds
+        onActivate: () => setIsDeveloperConsoleOpen(true),
+        onDeactivate: () => setIsDeveloperConsoleOpen(false),
+    });
+
+    // Secret sequence hook for "status" easter egg
+    useSecretSequence({
+        sequence: "status",
+        timeout: 15000, // Keep status open for 15 seconds
+        onActivate: () => setIsStatusActivityOpen(true),
+        onDeactivate: () => setIsStatusActivityOpen(false),
+    });
 
     useEffect(() => {
         AOS.init({
@@ -58,6 +83,18 @@ function App() {
                     </p>
                 </div>
             )}
+
+            {/* Developer Console Easter Egg */}
+            <DeveloperConsole
+                isVisible={isDeveloperConsoleOpen}
+                onClose={() => setIsDeveloperConsoleOpen(false)}
+            />
+
+            {/* Status Activity Easter Egg */}
+            <StatusActivity
+                isVisible={isStatusActivityOpen}
+                onClose={() => setIsStatusActivityOpen(false)}
+            />
         </section>
     );
 }

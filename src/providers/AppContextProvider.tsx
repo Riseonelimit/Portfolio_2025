@@ -7,6 +7,10 @@ type AppContextType = {
     setIsProjectHovered: (isProjectHovered: boolean) => void;
     isRecruiterMode: boolean;
     setIsRecruiterMode: (isRecruiterMode: boolean) => void;
+    isDeveloperConsoleOpen: boolean;
+    setIsDeveloperConsoleOpen: (isDeveloperConsoleOpen: boolean) => void;
+    isStatusActivityOpen: boolean;
+    setIsStatusActivityOpen: (isStatusActivityOpen: boolean) => void;
 };
 
 export const AppContext = createContext<AppContextType>({
@@ -16,6 +20,10 @@ export const AppContext = createContext<AppContextType>({
     setIsProjectHovered: () => {},
     isRecruiterMode: false,
     setIsRecruiterMode: () => {},
+    isDeveloperConsoleOpen: false,
+    setIsDeveloperConsoleOpen: () => {},
+    isStatusActivityOpen: false,
+    setIsStatusActivityOpen: () => {},
 });
 
 const AppContextProvider = ({ children }: { children: ReactNode }) => {
@@ -24,6 +32,12 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
     const [isProjectHovered, setIsProjectHovered] = useState<boolean>(false);
 
     const [isRecruiterMode, setIsRecruiterMode] = useState<boolean>(false);
+
+    const [isDeveloperConsoleOpen, setIsDeveloperConsoleOpen] =
+        useState<boolean>(false);
+
+    const [isStatusActivityOpen, setIsStatusActivityOpen] =
+        useState<boolean>(false);
 
     return (
         <AppContext.Provider
@@ -34,6 +48,10 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
                 setIsProjectHovered,
                 isRecruiterMode,
                 setIsRecruiterMode,
+                isDeveloperConsoleOpen,
+                setIsDeveloperConsoleOpen,
+                isStatusActivityOpen,
+                setIsStatusActivityOpen,
             }}
         >
             {children}
